@@ -13,8 +13,8 @@
 
 <title>CalgaryR</title>
 
-<script src="site_libs/header-attrs-2.8/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.30/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -57,6 +57,7 @@ if (window.hljs) {
 
 
 
+
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
 
@@ -81,6 +82,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -138,11 +142,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -171,8 +179,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -180,16 +188,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -233,7 +234,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -246,7 +247,7 @@ $(document).ready(function () {
   <a href="index.html">Home</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Meetings
      
     <span class="caret"></span>
@@ -276,7 +277,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Projects
      
     <span class="caret"></span>
@@ -288,7 +289,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     SIG
      
     <span class="caret"></span>
@@ -303,7 +304,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Connect
      
     <span class="caret"></span>
@@ -318,7 +319,7 @@ $(document).ready(function () {
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Events
      
     <span class="caret"></span>
@@ -349,9 +350,29 @@ $(document).ready(function () {
 </div>
 
 
-<p><strong>CalgaryR</strong> is a community of data enthusiasts and endeavors working with R. We are pursuing a continuing education and creating a self-development opportunity from experiences shared by our friends. <strong><a href="https://www.linkedin.com/in/gnustats/" target="_blank">Chel Hee Lee</a></strong>, <strong><a href="https://www.linkedin.com/in/cliff-sobchuk/" target="_blank">Cliff Sobchuk</a></strong>, <strong><a href="https://github.com/jonlinca" target="_blank">Jonathan Lin</a></strong>, <strong><a href="https://www.linkedin.com/in/dylan-loader/" target="_blank">Dylan Loader</a></strong>, <strong><a href="https://www.linkedin.com/in/adames-pablo-87149711/" target="_blank">Adames Pablo</a></strong>, <strong><a href="https://www.linkedin.com/in/jenniferleelibrarian/?originalSubdomain=ca" target="_blank">Jennifer Lee</a></strong>, <strong><a href="https://www.linkedin.com/in/john-brosz-65b4565/?originalSubdomain=ca" target="_blank">John Brosz</a></strong>, <strong><a href="https://www.linkedin.com/in/byron-chu/?originalSubdomain=ca" target="_blank">Byron Chu</a></strong>, and <strong><a href="http://marta-vidal-garcia.weebly.com/">Marta Vidal Garcia</a></strong> are volunteered to organize events. If you are interested in sponsoring our community, hosting a meeting, or making sugggestions, please feel free to contact one of the organizers. Feedback or question via <a href="mailto:imstatsbee@gmail.com">email to Chel</a> is of course most appreciated. Please join our <a href="https://www.meetup.com/Calgary-R-User-Group/" target="_blank">Meetup</a> and <a href="https://yyc-r.slack.com/" target="_blank">public workspace on Slack</a>.</p>
-<p><br> <strong><font size=5>Thanks to our fantastic sponsors!</font></strong></p>
-<p>We could not continue our activities withtout the following sponsors:</p>
+<p><strong>CalgaryR</strong> is a community of data enthusiasts and
+endeavors working with R. We are pursuing a continuing education and
+creating a self-development opportunity from experiences shared by our
+friends. <strong><a href="https://www.linkedin.com/in/gnustats/"
+target="_blank">Chel Hee Lee</a></strong>, <strong><a
+href="https://www.linkedin.com/in/adames-pablo-87149711/"
+target="_blank">Adames Pablo</a></strong>, <strong><a
+href="https://www.linkedin.com/in/jenniferleelibrarian/?originalSubdomain=ca"
+target="_blank">Jennifer Lee</a></strong>, <strong><a
+href="https://www.linkedin.com/in/john-brosz-65b4565/?originalSubdomain=ca"
+target="_blank">John Brosz</a></strong> are volunteered to organize
+events. If you are interested in sponsoring our community, hosting a
+meeting, or making sugggestions, please feel free to contact one of the
+organizers. Feedback or question via <a
+href="mailto:imstatsbee@gmail.com">email to Chel</a> is of course most
+appreciated. Please join our <a
+href="https://www.meetup.com/Calgary-R-User-Group/"
+target="_blank">Meetup</a> and <a href="https://yyc-r.slack.com/"
+target="_blank">public workspace on Slack</a>.</p>
+<p><br> <strong><font size=5>Thanks to our fantastic
+sponsors!</font></strong></p>
+<p>We could not continue our activities withtout the following
+sponsors:</p>
 <!-- 
 [![](./img/dccm.png){width=300px}](https://cumming.ucalgary.ca/labs/calgary-critical-care-research-network/){target="_blank"} 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -359,13 +380,18 @@ $(document).ready(function () {
 <table>
 <tr>
 <td width="350">
-<font size="4"> <b><a href="http://math.ucalgary.ca/" target="_blank">Department of Mathematics and Statistics | Faculty of Science | University of Calgary</a></b> </font>
+<font size="4"> <b><a
+href="https://science.ucalgary.ca/mathematics-statistics/contacts"
+target="_blank">Department of Mathematics and Statistics | Faculty of
+Science | University of Calgary</a></b> </font>
 </td>
 <td width="350">
-<a href="https://cumming.ucalgary.ca/centres/centre-health-informatics" target="_blank"><img src="img/ucchi.jpg" width="350" /></a>
+<a href="https://cumming.ucalgary.ca/centres/centre-health-informatics"
+target="_blank"><img src="img/ucchi.jpg" width="350" /></a>
 </td>
 <td width="350">
-<a href="https://www.r-consortium.org/" target="_blank"><img src="img/RConsortium_Horizontal_Pantone.png" width="290" /></a>
+<a href="https://www.r-consortium.org/" target="_blank"><img
+src="img/RConsortium_Horizontal_Pantone.png" width="290" /></a>
 </td>
 </tr>
 <tr>
@@ -379,10 +405,13 @@ $(document).ready(function () {
 </tr>
 <tr>
 <td>
-<a href="https://www.pims.math.ca/" target="_blank"><img src="img/webhorizfulllarge.png" width="275" /></a>
+<a href="https://www.pims.math.ca/" target="_blank"><img
+src="img/webhorizfulllarge.png" width="275" /></a>
 </td>
 <td>
-<a href="https://www.cenovus.com/" target="_blank"><img src="img/cenovus.png" width="250" /></a> <!-- [![](./img/medlior.png){width=275px}](https://www.medlior.com/?doing_wp_cron=1580355585.6735188961029052734375){target="_blank"} -->
+<a href="https://www.cenovus.com/" target="_blank"><img
+src="img/cenovus.png" width="250" /></a>
+<!-- [![](./img/medlior.png){width=275px}](https://www.medlior.com/?doing_wp_cron=1580355585.6735188961029052734375){target="_blank"} -->
 </td>
 <td>
 <!-- [![](./img/viewpointgroup.png){width=350px}](https://www.viewpointresearch.ca/){target="_blank"} -->
@@ -391,7 +420,9 @@ $(document).ready(function () {
 </tr>
 <tr>
 <td>
-<a href="https://obrieniph.ucalgary.ca/research/centres-programs-research-groups-and-units/biostatistics-centre-ucbc" target="_blank"><img src="img/ucbc.png" width="300" /></a>
+<a
+href="https://obrieniph.ucalgary.ca/research/centres-programs-research-groups-and-units/biostatistics-centre-ucbc"
+target="_blank"><img src="img/ucbc.png" width="300" /></a>
 </td>
 <td>
 </td>
@@ -401,11 +432,25 @@ $(document).ready(function () {
 </table>
 <p><strong><font size=5>Thanks to your service!</font></strong></p>
 <ul>
-<li><strong>2019 - 2020</strong> <a href="https://www.linkedin.com/in/andrey-sivyakov-030394114/" target="_blank">Andrey Sivyakov</a>, <a href="https://www.linkedin.com/in/emma-yizhou-liu-7a8b3242/" target="_blank">Emma Liu</a>, <a href="https://www.linkedin.com/in/benjamin-reeves-91566767/" target="_blank">Ben Reeves</a></li>
-<li><strong>2017 - 2020</strong> <a href="https://www.linkedin.com/in/marc-boulet-5bb87023/" target="_blank">Marc Boulet</a></li>
-<li><strong>2018 - 2019</strong> <a href="https://www.linkedin.com/in/sonbol-yazdanbakhsh-ph-d-99502735/" target="_blank">Sonbol Yazdanbakhsh</a></li>
-<li><strong>2017 - 2018</strong> <a href="https://www.linkedin.com/in/laurakeating/" target="_blank">Laura Keating</a></li>
-<li><strong>2017 - 2018</strong> <a href="https://www.linkedin.com/in/nimasafaian/" target="_blank">Nima Safaian</a></li>
+<li><strong>2019 - 2020</strong> <a
+href="https://www.linkedin.com/in/andrey-sivyakov-mba-msc-030394114/"
+target="_blank">Andrey Sivyakov</a>, <a
+href="https://www.linkedin.com/in/emma-yizhou-liu-7a8b3242/"
+target="_blank">Emma Liu</a>, <a
+href="https://www.linkedin.com/in/benjamin-reeves-91566767/"
+target="_blank">Ben Reeves</a></li>
+<li><strong>2017 - 2020</strong> <a
+href="https://www.linkedin.com/in/marc-boulet-5bb87023/"
+target="_blank">Marc Boulet</a></li>
+<li><strong>2018 - 2019</strong> <a
+href="https://www.linkedin.com/in/sonbol-yazdanbakhsh-ph-d-99502735/"
+target="_blank">Sonbol Yazdanbakhsh</a></li>
+<li><strong>2017 - 2018</strong> <a
+href="https://www.linkedin.com/in/laurakeating/" target="_blank">Laura
+Keating</a></li>
+<li><strong>2017 - 2018</strong> <a
+href="https://www.linkedin.com/in/nimasafaian/" target="_blank">Nima
+Safaian</a></li>
 </ul>
 
 <br>
