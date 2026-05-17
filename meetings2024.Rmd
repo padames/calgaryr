@@ -60,6 +60,17 @@ This presentation covers a mixed deep learning technique, Convolutional Neural N
 + Speaker: [<b>Pablo Adames, Software Engineer</b>](https://www.linkedin.com/in/pablo-adames-87149711/){target="_blank"}
 + Location: (Room 440A and D) Taylor Family Digital Library, University of Calgary
 
+The story of how this tutorials were created and how they are used to teach R Syntax for data science.
+
+https://padames-shiny.shinyapps.io/P1_OperatorsVarsBuiltIns/
+https://padames-shiny.shinyapps.io/P2_Vectors_in_R/
+https://padames-shiny.shinyapps.io/P3_Matrices_Arrays/
+https://padames-shiny.shinyapps.io/P4_Lists/
+https://padames-shiny.shinyapps.io/P5_DataFrames/
+https://padames-shiny.shinyapps.io/P6_User_Functions_and_Programming/
+https://padames-shiny.shinyapps.io/P7_BaseR_Graphics/
+
+
 \
 
 #### 2024-NOV-19 [Joint modelling of repeated measurements and time-to-event data](https://www.meetup.com/calgaryr/events/303153313/){target="_blank"}
@@ -73,7 +84,7 @@ Two examples will illustrate an individualized prediction regarding patient prog
 
 #### 2024-NOV-19 [From Math to App](https://www.meetup.com/calgaryr/events/303153313/){target="_blank"}
 
-+ Speaker: [<b>Pablo Adames, Software Engineer</b>](){target="_blank"}
++ Speaker: [<b>Pablo Adames, Software Engineer</b>](https://www.linkedin.com/in/pablo-adames-87149711/){target="_blank"}
 + Location: (Room 440A and D) Taylor Family Digital Library, University of Calgary
 + App: [<b>The app</b>](http://padames-shiny.shinyapps.io/spring-dynamics)
 + Source: [https://github.com/padames/lumped-model-dynamics](https://github.com/padames/lumped-model-dynamics)
@@ -91,9 +102,9 @@ We will learn the fundamentals of Bayesian inference and exercise implementing t
 
 \
 
-#### 2022-NOV/DEC [When two dimensions aren't enough to tell your data story](https://www.meetup.com/calgaryr/events/303153331/){target="_blank"}
+#### 2024-DEC-10 [When two dimensions aren't enough to tell your data story](https://www.meetup.com/calgaryr/events/303153331/){target="_blank"}
 
-+ Speaker: [<b>Pablo Adames, Software Engineer</b>](){target="_blank"}
++ Speaker: [<b>Pablo Adames, Software Engineer</b>](https://www.linkedin.com/in/pablo-adames-87149711/){target="_blank"}
 + Location: 
 + Presentation: [<b>https://padames.github.io/FromFlatVisToGIF/</b>](https://padames.github.io/FromFlatVisToGIF/)
 + Source: [https://github.com/padames/FromFlatVisToGIF](https://github.com/padames/FromFlatVisToGIF)
