@@ -8,12 +8,12 @@ navbar:
       menu:
         - text: "Wishlist"
           href: wishlist.html
+        - text: "2024"
+          href: meetings2024.html
         - text: "2022"
           href: meetings2022.html
         - text: "2021"
           href: meetings2021.html
-        - text: "2020"
-          href: meetings2020.html
         - text: "2019"
           href: meetings2019.html
         - text: "2018"
