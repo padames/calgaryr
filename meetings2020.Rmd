@@ -1,6 +1,0 @@
----
-title: "**Meetings in 2020**"
-output: html_document
----
-
-<br>

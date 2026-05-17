@@ -1,0 +1,101 @@
+---
+title: "**Meetings in 2024**"
+output: html_document
+---
+
+<br>
+
+
+#### 2024-SEP-24 [<b>It's a feature, not a bug! Coercion,recycling and sub-setting</b>](https://www.meetup.com/calgaryr/events/302449717/){target="_blank"}
+
+
++ Speaker: [<b>Pablo Adames, Software Engineer</b>](https://www.linkedin.com/in/pablo-adames-87149711/){target="_blank"}
++ Location: (Room 440A and D) Taylor Family Digital Library, University of Calgary
++ Slides: [<b>It's a feature, not a bug! Coercion, recycling and sub-setting</b>](https://padames.github.io/Three-R-Pillars/#1)
++ Source: [https://github.com/padames/Three-R-Pillars](https://github.com/padames/Three-R-Pillars)
+
+We will be digging deep to uncover some of R's superpowers and pillars of the core R syntax for expressive and powerful data manipulation and mathematics. If you know these three fundamental concepts and how to use them, you will be more effective with the R language.
+
+\
+
+#### 2024-SEP-24 [Data Science Proof of Concept Design: Applications in Oil and Gas](https://www.meetup.com/calgaryr/events/302449717/){target="_blank"}
+
+
++ Speaker: [<b>Dr. Alistar Muir,PhD, BSc, BEd, MBB</b>](https://www.linkedin.com/in/alastairkerrmuir/){target="_blank"}
++ Location: (Room 440A and D) Taylor Family Digital Library, University of Calgary
+
+
+Dr. Muir will show the process for managing and executing data science-based Proof of Concept projects in Oil and Gas. This concentrates on the initial understanding of the problem and requirements from the client to develop the analytics, predictive modelling and forecasting. Once defined and architected, solutions pass over to the implementation team.
+The impact of the following examples of projects is in the 10s of millions per year. These projects took from 3-8 weeks:
+
+ 1.  Increased solvent recovery from oil sands tailings, 1st and 2nd stages
+ 2.  Steam heat allocation in oil sands extraction and processing plant
+ 3.  Soft sensor design to generate near real-time distillation curves (ASTM D86), octane rating, cloud point, etc., of crude and processed oil
+ 4.  Estimated Ultimate Recovery (EUR) of unconventional assets: analysis and optimization
+
+\
+
+#### 2024-OCT-22 [Satellites, Machine Learning and Urban Ecology: the experience of Kryvyi Rih City](https://www.meetup.com/calgaryr/events/303153306/){target="_blank"}
+
++ Speaker: [<b>Yevhen Vasylenko, APEGA G.I.T.</b>](https://www.linkedin.com/in/yevhenvasylenko/){target="_blank"}
++ Location: (Room 440A and D) Taylor Family Digital Library, University of Calgary
+
+This presentation showcases a classification of land cover types in Kryvyi Rih, using Random Forests. This work led to public debate and policy revisions for greening industrial zones. The methodologies developed continue to inform decisions on optimizing green areas around industrial sites.
+
+\
+
+#### 2024-OCT-22 [ECG Abnormalities Detection using CNN and LSTM, Sungki Park](https://www.meetup.com/calgaryr/events/303153306/){target="_blank"}
+
++ Speaker: [<b>Sungki Park, Senior Software Engineer, Clarity.ca</b>](https://www.linkedin.com/in/sungki-park-13294a35/){target="_blank"}
++ Location: (Room 440A and D) Taylor Family Digital Library, University of Calgary
+
+
+This presentation covers a mixed deep learning technique, Convolutional Neural Networks (CNN) and Long Short-Term Memory (LSTM) networks for detecting ECG abnormalities, such as arrhythmia and myocardial infarction. CNNs are used to extract spatial features from the 1D ECG time series, identifying patterns like R-peaks and QRS complexes. The model efficiently learns local features from heartbeats. LSTM layers capture temporal dependencies, modelling the sequential nature of the ECG signals to detect irregular heartbeat rhythms. The model is trained on preprocessed ECG data, which is normalized and segmented into smaller windows. CNN extracts features, and the LSTM captures temporal patterns across time steps. The final dense layer classifies the signals as either normal or a type of arrhythmia. This approach may reduce manual analysis time and enable potential real-time heart monitoring in wearable device
+
+\
+
+#### 2024-OCT-22 [<b>Teaching R using R in the cloud</b>](https://www.meetup.com/calgaryr/events/303153306/)
+
+
++ Speaker: [<b>Pablo Adames, Software Engineer</b>](https://www.linkedin.com/in/pablo-adames-87149711/){target="_blank"}
++ Location: (Room 440A and D) Taylor Family Digital Library, University of Calgary
+
+\
+
+#### 2024-NOV-19 [Joint modelling of repeated measurements and time-to-event data](https://www.meetup.com/calgaryr/events/303153313/){target="_blank"}
+
++ Speaker: [<b>Rebecca Quaijah: Biostatistics MSc Program student, Mathematics and Statistics, University of Calgaryr</b>](){target="_blank"}
++ Location: (Room 440A and D) Taylor Family Digital Library, University of Calgary
+
+Two examples will illustrate an individualized prediction regarding patient prognosis using health state progress over time.
+
+\
+
+#### 2024-NOV-19 [From Math to App](https://www.meetup.com/calgaryr/events/303153313/){target="_blank"}
+
++ Speaker: [<b>Pablo Adames, Software Engineer</b>](){target="_blank"}
++ Location: (Room 440A and D) Taylor Family Digital Library, University of Calgary
++ App: [<b>The app</b>](http://padames-shiny.shinyapps.io/spring-dynamics)
++ Source: [https://github.com/padames/lumped-model-dynamics](https://github.com/padames/lumped-model-dynamics)
+
+We will use R tools to build a simple physical simulation. We will review mathematical modelling, problem decomposition, writing the smallest possible functions, unit testing, writing a driver script, making physical sense of the trends, and then writing a Shiny app and deploying it to the cloud. We will use `testthat`, `here`, `plotly`, `shiny`, `docstring`, and `dpylr`.
+
+\
+
+#### 2024-DEC-10 [Bayesian evaluation of diagnostic tests when the gold standard is unavailable](https://www.meetup.com/calgaryr/events/303153331/){target="_blank"}
+
++ Speaker: [<b>Chel Hee Lee, Adjunct Assistant Professor, Faculty of Science, Department of Mathematics and Statistics /b>](https://profiles.ucalgary.ca/chel-hee-lee){target="_blank"}
++ Location: (Room 440A and D) Taylor Family Digital Library, University of Calgary
+
+We will learn the fundamentals of Bayesian inference and exercise implementing the Gibbs sampler for inferences about each diagnostic test's accuracy measures.
+
+\
+
+#### 2022-NOV/DEC [When two dimensions aren't enough to tell your data story](https://www.meetup.com/calgaryr/events/303153331/){target="_blank"}
+
++ Speaker: [<b>Pablo Adames, Software Engineer</b>](){target="_blank"}
++ Location: 
++ Presentation: [<b>https://padames.github.io/FromFlatVisToGIF/</b>](https://padames.github.io/FromFlatVisToGIF/)
++ Source: [https://github.com/padames/FromFlatVisToGIF](https://github.com/padames/FromFlatVisToGIF)
+
+This talk will use `ggplot2` and `lattice` to build simulations that express statistical facts and complex data interactions. Join us to learn the use case and the tools for creating these visualizations in R.
